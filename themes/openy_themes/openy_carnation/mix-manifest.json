@@ -1,3 +1,6 @@
 {
-    "/dist/app.js": "/dist/app.js"
+    "/js/jonard.documents.js": "/js/jonard.documents.js",
+    "/js/jonard.news-events.tabs.js": "/js/jonard.news-events.tabs.js",
+    "/js/jonard.script.js": "/js/jonard.script.js",
+    "/js/jquery.rd-navbar.js": "/js/jquery.rd-navbar.js"
 }
