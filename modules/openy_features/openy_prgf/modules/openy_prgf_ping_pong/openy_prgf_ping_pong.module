@@ -25,13 +25,6 @@ function openy_prgf_ping_pong_preprocess_paragraph(&$variables) {
       $variables['content_width_class'] = 'col-xs-12 col-md-6';
       $imageFloat = $paragraph->get('field_prgf_image_float')->value;
 
-      // Default to light theme.
-      $variables['color_theme'] = 'theme-light';
-      if(!$paragraph->get('field_ping_pong_theme')->isEmpty()) {
-        $variables['color_theme'] = 'theme-' . $paragraph->get('field_ping_pong_theme')->value;
-      }
-
-
       if (!$paragraph->get('field_prgf_image_width')->isEmpty()) {
         switch ($paragraph->get('field_prgf_image_width')->value) {
           case 33:

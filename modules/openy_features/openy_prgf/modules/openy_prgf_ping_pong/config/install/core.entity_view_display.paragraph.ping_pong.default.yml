@@ -3,12 +3,14 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.ping_pong.field_prgf_background_color
+    - field.field.paragraph.ping_pong.field_prgf_bg_image
     - field.field.paragraph.ping_pong.field_prgf_content_align
     - field.field.paragraph.ping_pong.field_prgf_description
     - field.field.paragraph.ping_pong.field_prgf_image
     - field.field.paragraph.ping_pong.field_prgf_image_float
     - field.field.paragraph.ping_pong.field_prgf_image_width
     - field.field.paragraph.ping_pong.field_prgf_link
+    - field.field.paragraph.ping_pong.field_prgf_ping_pong_theme
     - field.field.paragraph.ping_pong.field_prgf_title
     - field.field.paragraph.ping_pong.field_prgf_video
     - field.field.paragraph.ping_pong.field_prgf_video_play_mode
@@ -20,6 +22,8 @@ dependencies:
     - responsive_image
     - text
     - video_embed_field
+_core:
+  default_config_hash: VgFDIzGH-0jWjQFR6092FoYTsjYfPDYMClwBXuei-IY
 id: paragraph.ping_pong.default
 targetEntityType: paragraph
 bundle: ping_pong
@@ -33,6 +37,14 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_prgf_bg_image:
+    type: entity_reference_label
+    weight: 11
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
   field_prgf_content_align:
     weight: 6
     label: hidden
@@ -82,6 +94,13 @@ content:
     third_party_settings: {  }
     type: link
     region: content
+  field_prgf_ping_pong_theme:
+    type: list_default
+    weight: 10
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   field_prgf_title:
     weight: 3
     label: hidden
@@ -111,4 +130,5 @@ content:
     third_party_settings: {  }
     type: list_key
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

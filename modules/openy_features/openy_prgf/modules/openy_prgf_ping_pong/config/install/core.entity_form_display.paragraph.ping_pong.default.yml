@@ -3,19 +3,20 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.ping_pong.field_prgf_background_color
+    - field.field.paragraph.ping_pong.field_prgf_bg_image
     - field.field.paragraph.ping_pong.field_prgf_content_align
     - field.field.paragraph.ping_pong.field_prgf_description
     - field.field.paragraph.ping_pong.field_prgf_image
     - field.field.paragraph.ping_pong.field_prgf_image_float
     - field.field.paragraph.ping_pong.field_prgf_image_width
     - field.field.paragraph.ping_pong.field_prgf_link
+    - field.field.paragraph.ping_pong.field_prgf_ping_pong_theme
     - field.field.paragraph.ping_pong.field_prgf_title
     - field.field.paragraph.ping_pong.field_prgf_video
     - field.field.paragraph.ping_pong.field_prgf_video_play_mode
     - image.style.thumbnail
     - paragraphs.paragraphs_type.ping_pong
   module:
-    - content_moderation
     - field_group
     - image
     - link
@@ -34,11 +35,12 @@ third_party_settings:
       weight: 0
       format_type: fieldset
       format_settings:
-        id: ''
-        classes: ''
         description: ''
         required_fields: true
+        id: ''
+        classes: ''
       label: Media
+      region: content
     group_content:
       children:
         - field_prgf_title
@@ -50,11 +52,14 @@ third_party_settings:
       weight: 1
       format_type: fieldset
       format_settings:
-        id: ''
-        classes: ''
         description: ''
         required_fields: true
+        id: ''
+        classes: ''
       label: Content
+      region: content
+_core:
+  default_config_hash: B2TYLXUpnitT0ZDADe18TmdSGOaXHKXl4mKWnggjaz8
 id: paragraph.ping_pong.default
 targetEntityType: paragraph
 bundle: ping_pong
@@ -68,6 +73,15 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_prgf_bg_image:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_prgf_content_align:
     weight: 3
     settings: {  }
@@ -110,6 +124,12 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
+  field_prgf_ping_pong_theme:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_prgf_title:
     weight: 0
     settings:
@@ -125,7 +145,7 @@ content:
     type: video_embed_field_textfield
     region: content
   field_prgf_video_play_mode:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
