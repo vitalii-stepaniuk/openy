@@ -6,7 +6,7 @@ dependencies:
     - field.field.paragraph.ping_pong.field_prgf_bg_image
     - field.field.paragraph.ping_pong.field_prgf_content_align
     - field.field.paragraph.ping_pong.field_prgf_description
-    - field.field.paragraph.ping_pong.field_prgf_image
+    - field.field.paragraph.ping_pong.field_prgf_ping_pong_image
     - field.field.paragraph.ping_pong.field_prgf_image_float
     - field.field.paragraph.ping_pong.field_prgf_image_width
     - field.field.paragraph.ping_pong.field_prgf_link
@@ -59,7 +59,7 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_prgf_image:
+  field_prgf_ping_pong_image:
     weight: 0
     label: hidden
     settings:

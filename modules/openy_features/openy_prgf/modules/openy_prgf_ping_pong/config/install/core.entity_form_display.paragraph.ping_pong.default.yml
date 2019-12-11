@@ -6,7 +6,7 @@ dependencies:
     - field.field.paragraph.ping_pong.field_prgf_bg_image
     - field.field.paragraph.ping_pong.field_prgf_content_align
     - field.field.paragraph.ping_pong.field_prgf_description
-    - field.field.paragraph.ping_pong.field_prgf_image
+    - field.field.paragraph.ping_pong.field_prgf_ping_pong_image
     - field.field.paragraph.ping_pong.field_prgf_image_float
     - field.field.paragraph.ping_pong.field_prgf_image_width
     - field.field.paragraph.ping_pong.field_prgf_link
@@ -26,7 +26,7 @@ third_party_settings:
   field_group:
     group_media:
       children:
-        - field_prgf_image
+        - field_prgf_ping_pong_image
         - field_prgf_image_float
         - field_prgf_image_width
         - field_prgf_video
@@ -96,7 +96,7 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_prgf_image:
+  field_prgf_ping_pong_image:
     weight: 1
     settings:
       progress_indicator: throbber

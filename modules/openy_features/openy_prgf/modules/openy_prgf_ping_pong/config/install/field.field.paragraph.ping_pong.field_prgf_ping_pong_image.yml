@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_prgf_image
+    - field.storage.paragraph.field_prgf_ping_pong_image
     - paragraphs.paragraphs_type.ping_pong
   module:
     - datalayer
@@ -10,9 +10,9 @@ dependencies:
 third_party_settings:
   datalayer:
     expose: 0
-    label: field_prgf_image
-id: paragraph.ping_pong.field_prgf_image
-field_name: field_prgf_image
+    label: field_prgf_ping_pong_image
+id: paragraph.ping_pong.field_prgf_ping_pong_image
+field_name: field_prgf_ping_pong_image
 entity_type: paragraph
 bundle: ping_pong
 label: Image
