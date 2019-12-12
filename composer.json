@@ -313,6 +313,6 @@
         "drupal/twig_tweak": "^2.4",
         "drupal/image_widget_crop": "^2.2",
         "drupal/colorbox": "^1.4",
-        "jackmoore/colorbox": "^1.4"
+        "jackmoore/colorbox": "^1.4.0"
     }
 }
