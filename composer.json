@@ -139,18 +139,6 @@
                     "type": "zip"
                 }
             }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "jackmoore/colorbox",
-                "version": "dev-master",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://github.com/jackmoore/colorbox/archive/master.zip",
-                    "type": "zip"
-                }
-            }
         }
     ],
     "scripts": {
@@ -313,6 +301,6 @@
         "drupal/twig_tweak": "^2.4",
         "drupal/image_widget_crop": "^2.2",
         "drupal/colorbox": "^1.4",
-        "jackmoore/colorbox": "dev-master"
+        "npm-asset/jquery-colorbox": "^1.6"
     }
 }
