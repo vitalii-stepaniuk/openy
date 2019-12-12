@@ -139,6 +139,18 @@
                     "type": "zip"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jackmoore/colorbox",
+                "version": "1.6.4",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/jackmoore/colorbox/archive/1.6.4.zip",
+                    "type": "zip"
+                }
+            }
         }
     ],
     "scripts": {
@@ -301,6 +313,6 @@
         "drupal/twig_tweak": "^2.4",
         "drupal/image_widget_crop": "^2.2",
         "drupal/colorbox": "^1.4",
-        "npm-asset/jquery-colorbox": "^1.6"
+        "jackmoore/colorbox": "^1.6"
     }
 }
