@@ -1,0 +1,65 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.images_library
+    - field.field.paragraph.horizontal_features.field_horizontal_feature_squares
+    - paragraphs.paragraphs_type.horizontal_features
+  module:
+    - content_moderation
+    - entity_browser
+    - paragraphs
+id: paragraph.horizontal_features.default
+targetEntityType: paragraph
+bundle: horizontal_features
+mode: default
+content:
+  field_horizontal_feature_squares:
+    type: entity_reference_paragraphs
+    weight: 102
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  paragraph_background_color:
+    type: options_select
+    weight: -9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  paragraph_background_image:
+    type: entity_browser_entity_reference
+    settings:
+      entity_browser: images_library
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: thumbnail_for_preview
+      open: false
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+    weight: -10
+    region: content
+    third_party_settings: {  }
+  paragraph_background_overlay:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: -8
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,108 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.images_library
+    - field.field.paragraph.features.field_prgf_feature_cta_link
+    - field.field.paragraph.features.field_prgf_feature_overlay
+    - field.field.paragraph.features.field_prgf_feature_square
+    - field.field.paragraph.features.field_prgf_feature_sub_heading
+    - field.field.paragraph.features.field_features_more_rnd_edges
+    - field.field.paragraph.features.field_features_title
+    - paragraphs.paragraphs_type.features
+  module:
+    - content_moderation
+    - entity_browser
+    - link
+    - paragraphs
+id: paragraph.features.default
+targetEntityType: paragraph
+bundle: features
+mode: default
+content:
+  field_prgf_feature_cta_link:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_prgf_feature_overlay:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_prgf_feature_square:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: feature_square
+    third_party_settings: {  }
+    region: content
+  field_prgf_feature_sub_heading:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_features_more_rnd_edges:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_features_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 0
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  paragraph_background_color:
+    type: options_select
+    weight: -9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  paragraph_background_image:
+    type: entity_browser_entity_reference
+    settings:
+      entity_browser: images_library
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: thumbnail_for_preview
+      open: false
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+    weight: -10
+    region: content
+    third_party_settings: {  }
+  paragraph_background_overlay:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: -8
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

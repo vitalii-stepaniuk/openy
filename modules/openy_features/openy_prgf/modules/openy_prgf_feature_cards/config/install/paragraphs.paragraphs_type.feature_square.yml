@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: feature_square
+label: 'Feature Square'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

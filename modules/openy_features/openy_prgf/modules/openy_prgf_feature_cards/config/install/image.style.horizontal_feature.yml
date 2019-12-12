@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: horizontal_feature
+label: 'Horizontal Feature'
+effects:
+  ed6be130-0a2e-4acf-8495-437736076730:
+    uuid: ed6be130-0a2e-4acf-8495-437736076730
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 430
+      height: 285
+      crop_type: focal_point

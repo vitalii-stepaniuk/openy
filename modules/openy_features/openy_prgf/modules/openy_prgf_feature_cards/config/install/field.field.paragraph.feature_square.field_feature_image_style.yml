@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_prgf_feature_image_style
+    - paragraphs.paragraphs_type.feature_square
+  module:
+    - datalayer
+    - options
+third_party_settings:
+  datalayer:
+    expose: 1
+    label: field_prgf_feature_image_style
+id: paragraph.feature_square.field_prgf_feature_image_style
+field_name: field_prgf_feature_image_style
+entity_type: paragraph
+bundle: feature_square
+label: 'Image Style'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: full_width
+default_value_callback: ''
+settings: {  }
+field_type: list_string

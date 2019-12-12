@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_feature_square_body
+    - paragraphs.paragraphs_type.horizontal_feature_square
+  module:
+    - datalayer
+third_party_settings:
+  datalayer:
+    expose: 0
+    label: field_feature_square_body
+id: paragraph.horizontal_feature_square.field_feature_square_body
+field_name: field_feature_square_body
+entity_type: paragraph
+bundle: horizontal_feature_square
+label: 'Feature Square Body'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

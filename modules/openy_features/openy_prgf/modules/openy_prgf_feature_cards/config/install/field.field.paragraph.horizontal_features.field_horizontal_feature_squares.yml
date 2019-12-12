@@ -1,0 +1,269 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_horizontal_feature_squares
+    - paragraphs.paragraphs_type.horizontal_feature_square
+    - paragraphs.paragraphs_type.horizontal_features
+  module:
+    - datalayer
+    - entity_reference_revisions
+third_party_settings:
+  datalayer:
+    expose: 0
+    label: field_horizontal_feature_squares
+id: paragraph.horizontal_features.field_horizontal_feature_squares
+field_name: field_horizontal_feature_squares
+entity_type: paragraph
+bundle: horizontal_features
+label: 'Horizontal Feature Squares'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      horizontal_feature_square: horizontal_feature_square
+    target_bundles_drag_drop:
+      1c:
+        weight: 80
+        enabled: false
+      2c:
+        weight: 81
+        enabled: false
+      3c:
+        weight: 82
+        enabled: false
+      4c:
+        weight: 83
+        enabled: false
+      addthis:
+        weight: 84
+        enabled: false
+      all_amenities:
+        weight: 85
+        enabled: false
+      banner:
+        weight: 86
+        enabled: false
+      block_date:
+        weight: 87
+        enabled: false
+      blog_posts_listing:
+        weight: 88
+        enabled: false
+      bp_accordion:
+        weight: 89
+        enabled: false
+      bp_accordion_section:
+        weight: 90
+        enabled: false
+      bp_blank:
+        weight: 91
+        enabled: false
+      bp_block:
+        weight: 92
+        enabled: false
+      bp_carousel:
+        weight: 93
+        enabled: false
+      bp_column_wrapper:
+        weight: 94
+        enabled: false
+      bp_columns:
+        weight: 95
+        enabled: false
+      bp_columns_three_uneven:
+        weight: 96
+        enabled: false
+      bp_columns_two_uneven:
+        weight: 97
+        enabled: false
+      bp_image:
+        weight: 98
+        enabled: false
+      bp_modal:
+        weight: 99
+        enabled: false
+      bp_simple:
+        weight: 100
+        enabled: false
+      bp_tab_section:
+        weight: 101
+        enabled: false
+      bp_tabs:
+        weight: 102
+        enabled: false
+      bp_view:
+        weight: 103
+        enabled: false
+      branch_amenities:
+        weight: 104
+        enabled: false
+      branches_popup_all:
+        weight: 105
+        enabled: false
+      branches_popup_class:
+        weight: 106
+        enabled: false
+      breadcrumbs:
+        weight: 107
+        enabled: false
+      camp_menu:
+        weight: 108
+        enabled: false
+      categories_listing:
+        weight: 109
+        enabled: false
+      class_location:
+        weight: 110
+        enabled: false
+      class_sessions:
+        weight: 111
+        enabled: false
+      classes_listing:
+        weight: 112
+        enabled: false
+      classes_listing_filters:
+        weight: 113
+        enabled: false
+      code:
+        weight: 114
+        enabled: false
+      daxko_link_iframe:
+        weight: 115
+        enabled: false
+      embedded_groupexpro_schedule:
+        weight: 116
+        enabled: false
+      feature_square:
+        weight: 117
+        enabled: false
+      featured_blogs:
+        weight: 118
+        enabled: false
+      featured_content:
+        weight: 119
+        enabled: false
+      featured_highlights:
+        weight: 120
+        enabled: false
+      featured_news:
+        weight: 121
+        enabled: false
+      features:
+        weight: 122
+        enabled: false
+      gallery:
+        weight: 123
+        enabled: false
+      grid_columns:
+        weight: 124
+        enabled: false
+      grid_content:
+        weight: 125
+        enabled: false
+      group_schedules:
+        weight: 126
+        enabled: false
+      horizontal_feature_square:
+        enabled: true
+        weight: 127
+      horizontal_features:
+        weight: 128
+        enabled: false
+      latest_blog_posts:
+        weight: 129
+        enabled: false
+      latest_blog_posts_branch:
+        weight: 130
+        enabled: false
+      latest_blog_posts_camp:
+        weight: 131
+        enabled: false
+      latest_news_posts:
+        weight: 132
+        enabled: false
+      latest_news_posts_branch:
+        weight: 133
+        enabled: false
+      latest_news_posts_camp:
+        weight: 134
+        enabled: false
+      lto:
+        weight: 135
+        enabled: false
+      membership_flow:
+        weight: 136
+        enabled: false
+      membership_info:
+        weight: 137
+        enabled: false
+      microsites_menu:
+        weight: 138
+        enabled: false
+      mini_info_piece:
+        weight: 139
+        enabled: false
+      mini_info_section:
+        weight: 140
+        enabled: false
+      news_posts_listing:
+        weight: 141
+        enabled: false
+      openy_prgf_mbrshp_calc:
+        weight: 142
+        enabled: false
+      ping_pong:
+        weight: 143
+        enabled: false
+      prgf_location_finder:
+        weight: 144
+        enabled: false
+      prgf_location_finder_filters:
+        weight: 145
+        enabled: false
+      program_registration:
+        weight: 146
+        enabled: false
+      promo_card:
+        weight: 147
+        enabled: false
+      schedule_search_form:
+        weight: 148
+        enabled: false
+      schedule_search_list:
+        weight: 149
+        enabled: false
+      secondary_description_sidebar:
+        weight: 150
+        enabled: false
+      session_time:
+        weight: 151
+        enabled: false
+      simple_content:
+        weight: 152
+        enabled: false
+      small_banner:
+        weight: 153
+        enabled: false
+      social_list:
+        weight: 154
+        enabled: false
+      story_card:
+        weight: 155
+        enabled: false
+      teaser:
+        weight: 156
+        enabled: false
+      test:
+        weight: 157
+        enabled: false
+      webform:
+        weight: 158
+        enabled: false
+field_type: entity_reference_revisions

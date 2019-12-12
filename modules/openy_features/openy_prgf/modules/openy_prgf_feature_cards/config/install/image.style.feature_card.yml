@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: feature_card
+label: 'Feature Card'
+effects:
+  25644b64-f544-4579-a6ac-9d6d6f590d48:
+    uuid: 25644b64-f544-4579-a6ac-9d6d6f590d48
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 380
+      height: 205
+      crop_type: focal_point

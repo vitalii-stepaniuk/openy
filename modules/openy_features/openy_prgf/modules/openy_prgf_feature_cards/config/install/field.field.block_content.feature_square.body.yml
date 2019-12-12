@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.feature_square
+    - field.storage.block_content.body
+  module:
+    - datalayer
+    - text
+third_party_settings:
+  datalayer:
+    expose: 0
+    label: body
+id: block_content.feature_square.body
+field_name: body
+entity_type: block_content
+bundle: feature_square
+label: Body
+description: 'Blurb under the image'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

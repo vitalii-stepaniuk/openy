@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: horizontal_features
+label: 'Horizontal Features'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

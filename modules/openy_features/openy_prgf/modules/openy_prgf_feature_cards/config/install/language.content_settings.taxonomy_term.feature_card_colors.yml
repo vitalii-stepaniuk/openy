@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.feature_card_colors
+id: taxonomy_term.feature_card_colors
+target_entity_type_id: taxonomy_term
+target_bundle: feature_card_colors
+default_langcode: site_default
+language_alterable: false

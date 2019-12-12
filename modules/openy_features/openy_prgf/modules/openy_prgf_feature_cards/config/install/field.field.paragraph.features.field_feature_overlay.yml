@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_prgf_feature_overlay
+    - paragraphs.paragraphs_type.features
+  module:
+    - datalayer
+    - options
+third_party_settings:
+  datalayer:
+    expose: 0
+    label: field_prgf_feature_overlay
+id: paragraph.features.field_prgf_feature_overlay
+field_name: field_prgf_feature_overlay
+entity_type: paragraph
+bundle: features
+label: 'Feature Overlay'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

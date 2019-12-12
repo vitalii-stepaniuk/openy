@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_prgf_feature_button_option
+field_name: field_prgf_feature_button_option
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: show
+      label: 'Link Button'
+    -
+      value: content
+      label: 'Link Content'
+    -
+      value: both
+      label: 'Link Button and Content'
+    -
+      value: full_card
+      label: 'Link Full Card'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.feature_square
+    - field.storage.block_content.field_feature_square_title
+  module:
+    - datalayer
+third_party_settings:
+  datalayer:
+    expose: 0
+    label: field_feature_square_title
+id: block_content.feature_square.field_feature_square_title
+field_name: field_feature_square_title
+entity_type: block_content
+bundle: feature_square
+label: 'Feature Square Title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

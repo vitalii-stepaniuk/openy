@@ -1,0 +1,5 @@
+feature-js:
+  js:
+    js/field_prgf_feature_cards.js: {}
+  dependencies:
+    - core/drupal

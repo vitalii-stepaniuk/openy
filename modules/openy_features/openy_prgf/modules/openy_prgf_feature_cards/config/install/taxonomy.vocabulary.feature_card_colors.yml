@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Feature Card Colors'
+vid: feature_card_colors
+description: ''
+hierarchy: 0
+weight: 0

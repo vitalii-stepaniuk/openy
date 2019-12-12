@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_feature_card_button_style
+    - paragraphs.paragraphs_type.feature_square
+  module:
+    - datalayer
+    - options
+third_party_settings:
+  datalayer:
+    expose: 0
+    label: field_feature_card_button_style
+id: paragraph.feature_square.field_feature_card_button_style
+field_name: field_feature_card_button_style
+entity_type: paragraph
+bundle: feature_square
+label: 'Button Style'
+description: 'Select whether you''d like the button to be a solid color or an outline.'
+required: false
+translatable: false
+default_value:
+  -
+    value: color_fill
+default_value_callback: ''
+settings: {  }
+field_type: list_string

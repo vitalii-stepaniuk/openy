@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: feature_square
+label: 'Feature Square'
+revision: 1
+description: ''
