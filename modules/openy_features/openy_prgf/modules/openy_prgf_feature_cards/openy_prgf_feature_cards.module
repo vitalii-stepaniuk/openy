@@ -2,12 +2,28 @@
 
 use Drupal\Core\Url;
 
+/**
+ * Implements hook_theme().
+ */
+function openy_prgf_feature_cards_theme() {
+  $theme = [];
+  $paragraphs = [
+    'feature_square',
+    'features',
+    'horizontal_feature_square',
+    'horizontal_features',
+  ];
+  foreach ($paragraphs as $paragraph) {
+    $theme['paragraph__' . $paragraph . '__default'] = ['base hook' => 'paragraph'];
+  }
+  return $theme;
+}
 
 /**
  * Implements hook_preprocess_paragraph
  * @param $variables
  */
-function field_prgf_feature_cards_preprocess_paragraph(&$variables) {
+function openy_prgf_feature_cards_preprocess_paragraph(&$variables) {
 
   $paragraph = $variables['paragraph'];
   $type = $paragraph->getType();
@@ -18,7 +34,7 @@ function field_prgf_feature_cards_preprocess_paragraph(&$variables) {
 
     // Determine whether this feature hsa an overlay.
     $overlay_class = "";
-    $overlay_field = $paragraph->get('field_feature_overlay');
+    $overlay_field = $paragraph->get('field_prgf_feature_overlay');
     if (!$overlay_field->isEmpty() && !\Drupal::currentUser()->isAuthenticated()) {
       $overlay_class = 'overlay-' . $overlay_field->value;
     }
@@ -26,7 +42,7 @@ function field_prgf_feature_cards_preprocess_paragraph(&$variables) {
     $variables['overlay_class'] = $overlay_class;
 
     // Determine whether squares should have more rounded borders.
-    if ($paragraph->get('field_prgf_feature_more_rnd_edges')->value) {
+    if ($paragraph->get('field_prgf_feature_more_edges')->value) {
       $variables['more_rounded'] = TRUE;
     }
   }
@@ -40,7 +56,7 @@ function field_prgf_feature_cards_preprocess_paragraph(&$variables) {
 
     // Place the title above or below the image
     // and provide a class for styling.
-    $title_placement = $paragraph->get('field_feature_title_option')->value;
+    $title_placement = $paragraph->get('field_prgf_feature_title_option')->value;
     if(empty($title_placement)) {
       $title_placement = 'none';
     }
@@ -50,29 +66,29 @@ function field_prgf_feature_cards_preprocess_paragraph(&$variables) {
 
     // Determine where to place our link, on the button,
     // on the content or both.
-    $placement = $paragraph->get('field_feature_button_option')->value;
+    $placement = $paragraph->get('field_prgf_feature_button_option')->value;
     $variables['link_placement'] = $placement;
 
     $variables['card_url'] = "";
 
     if ($placement == 'content' || $placement == 'both') {
-      if (!$paragraph->get('field_feature_square_cta')->isEmpty()) {
+      if (!$paragraph->get('field_prgf_feature_square_cta')->isEmpty()) {
         // Grab the url so we can place it around text if necessary.
-        $info = $paragraph->get('field_feature_square_cta')
+        $info = $paragraph->get('field_prgf_feature_square_cta')
           ->getValue()['0'];
 
         // Set the title to link instead of the button.
-        $variables['content']['field_feature_square_title'][0] = [
+        $variables['content']['field_prgf_feature_square_title'][0] = [
           '#type' => 'link',
-          '#title' => $paragraph->get('field_feature_square_title')->value,
+          '#title' => $paragraph->get('field_prgf_feature_square_title')->value,
           '#url' => Url::fromUri($info['uri']),
         ];
       }
     }
     else {
-      if ($placement == 'full_card' && !$paragraph->get('field_feature_square_cta')->isEmpty()) {
+      if ($placement == 'full_card' && !$paragraph->get('field_prgf_feature_square_cta')->isEmpty()) {
         // Grab the url so we can place it around text if necessary.
-        $info = $paragraph->get('field_feature_square_cta')
+        $info = $paragraph->get('field_prgf_feature_square_cta')
           ->getValue()['0'];
         if (isset($info['uri']) && is_string($info['uri'])) {
           $url = Url::fromUri($info['uri']);
@@ -104,22 +120,22 @@ function field_prgf_feature_cards_preprocess_paragraph(&$variables) {
 
 
     //Image size class
-    if($paragraph->hasField('field_feature_image_style')) {
-      $style = $paragraph->get('field_feature_image_style')->value;
+    if($paragraph->hasField('field_prgf_feature_image_style')) {
+      $style = $paragraph->get('field_prgf_feature_image_style')->value;
       if($style == 'full_width') {
         $variables['image_size_class'] = 'full-width-image';
       }
     }
 
-    if($paragraph->hasField('field_feature_square_image') &&
-      empty($paragraph->get('field_feature_square_image')->target_id)) {
+    if($paragraph->hasField('field_prgf_feature_square_image') &&
+      empty($paragraph->get('field_prgf_feature_square_image')->target_id)) {
       $variables['image_size_class'] = 'no-image';
 
     }
 
 
     // Get the card background color class
-    $background_style = field_prgf_feature_cards_get_color_from_field('field_feature_card_background', $paragraph);
+    $background_style = openy_prgf_feature_cards_get_color_from_field('field_prgf_feature_card_bg', $paragraph);
     if(empty($background_style)) {
       $background_style = '#FFFFFF';
     }
@@ -136,8 +152,8 @@ function field_prgf_feature_cards_preprocess_paragraph(&$variables) {
     }
 
     // Handle the class for our button style
-    if($paragraph->hasField('field_feature_card_button_style')) {
-      $style = $paragraph->get('field_feature_card_button_style')->value;
+    if($paragraph->hasField('field_prgf_feature_button_style')) {
+      $style = $paragraph->get('field_prgf_feature_button_style')->value;
       // Default to a fill-color
       if($style == 'color_fill' || empty($style)) {
         $button_class .= ' fill-color';
@@ -165,7 +181,7 @@ function field_prgf_feature_cards_preprocess_paragraph(&$variables) {
  * @return string
  * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
  */
-function field_prgf_feature_cards_get_color_from_field($field_name, $paragraph) {
+function openy_prgf_feature_cards_get_color_from_field($field_name, $paragraph) {
   $color_class = "";
 
   // Assign the button color classes

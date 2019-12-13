@@ -1,0 +1,77 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   - id: The paragraph ID.
+ *   - bundle: The type of the paragraph, for example, "image" or "text".
+ *   - authorid: The user ID of the paragraph author.
+ *   - createdtime: Formatted creation date. Preprocess functions can
+ *     reformat it by calling format_date() with the desired parameters on
+ *     $variables['paragraph']->getCreatedTime().
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set square_full_width = paragraph.field_feature_square_image.isEmpty()
+%}
+<div class="feature-square {{ bootstrap_classes }} ">
+  <div class="feature-square-container {{  title_class }} {{  link_class }} {{ image_size_class }}">
+
+    <div class="feature-content-container row">
+
+      {% if not paragraph.field_feature_square_image.isEmpty() %}
+        <div class="left-side col-xs-12 col-sm-12 col-md-5 feature-content-section">
+          <div class="feature-square-image">{{ content.field_feature_square_image }}</div>
+        </div>
+      {% endif %}
+
+      <div class="right-side col-xs-12 col-sm-12 {% if square_full_width %}col-md-12 no-img {% else %}col-md-7{% endif %} feature-content-section">
+        <div class="feature-square-content">
+          <div class="feature-square-title">
+            <h4>
+              {{ content.field_feature_square_title }}
+            </h4>
+          </div>
+
+          <div class="feature-square-description">
+              {{ content.field_feature_square_body }}
+          </div>
+
+          <div class="feature-square-button fa">
+            {{ content.field_feature_square_cta }}
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+  </div>
+  {#{% if card_url is not empty %}#}
+    {#<a href="{{ card_url }}" class="hidden feature-square-link">{{ "View More" }}</a>#}
+  {#{% endif %}#}
+</div>
