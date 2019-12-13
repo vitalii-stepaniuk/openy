@@ -1,10 +1,13 @@
+uuid: 848dc153-250c-4d59-94d8-c3979a2af6c9
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_features_more_rnd_edges
-field_name: field_features_more_rnd_edges
+_core:
+  default_config_hash: 6FrHKx6OYTMfbotK3YcGFY_evC9tXZfAxYuei7kmrOk
+id: paragraph.field_prgf_feature_more_edges
+field_name: field_prgf_feature_more_edges
 entity_type: paragraph
 type: boolean
 settings: {  }

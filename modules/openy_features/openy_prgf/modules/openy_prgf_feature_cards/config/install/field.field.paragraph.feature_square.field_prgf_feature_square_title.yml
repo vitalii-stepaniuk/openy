@@ -9,9 +9,9 @@ dependencies:
 third_party_settings:
   datalayer:
     expose: 0
-    label: field_feature_square_title
-id: paragraph.feature_square.field_feature_square_title
-field_name: field_feature_square_title
+    label: field_prgf_feature_square_title
+id: paragraph.feature_square.field_prgf_feature_square_title
+field_name: field_prgf_feature_square_title
 entity_type: paragraph
 bundle: feature_square
 label: 'Feature Square Title'

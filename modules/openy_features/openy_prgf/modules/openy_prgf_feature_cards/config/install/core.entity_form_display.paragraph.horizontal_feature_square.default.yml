@@ -3,10 +3,10 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.images_library
-    - field.field.paragraph.horizontal_feature_square.field_feature_square_body
-    - field.field.paragraph.horizontal_feature_square.field_feature_square_cta
-    - field.field.paragraph.horizontal_feature_square.field_feature_square_image
-    - field.field.paragraph.horizontal_feature_square.field_feature_square_title
+    - field.field.paragraph.horizontal_feature_square.field_prgf_feature_square_body
+    - field.field.paragraph.horizontal_feature_square.field_prgf_feature_square_cta
+    - field.field.paragraph.horizontal_feature_square.field_prgf_feature_square_image
+    - field.field.paragraph.horizontal_feature_square.field_prgf_feature_square_title
     - image.style.thumbnail
     - paragraphs.paragraphs_type.horizontal_feature_square
   module:
@@ -19,7 +19,7 @@ targetEntityType: paragraph
 bundle: horizontal_feature_square
 mode: default
 content:
-  field_feature_square_body:
+  field_prgf_feature_square_body:
     weight: 104
     settings:
       rows: 5
@@ -27,7 +27,7 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
-  field_feature_square_cta:
+  field_prgf_feature_square_cta:
     weight: 102
     settings:
       placeholder_url: ''
@@ -35,7 +35,7 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_feature_square_image:
+  field_prgf_feature_square_image:
     weight: 101
     settings:
       progress_indicator: throbber
@@ -43,7 +43,7 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  field_feature_square_title:
+  field_prgf_feature_square_title:
     weight: 103
     settings:
       size: 60

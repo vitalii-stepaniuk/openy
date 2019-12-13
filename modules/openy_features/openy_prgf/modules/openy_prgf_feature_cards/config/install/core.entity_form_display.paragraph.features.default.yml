@@ -7,8 +7,8 @@ dependencies:
     - field.field.paragraph.features.field_prgf_feature_overlay
     - field.field.paragraph.features.field_prgf_feature_square
     - field.field.paragraph.features.field_prgf_feature_sub_heading
-    - field.field.paragraph.features.field_features_more_rnd_edges
-    - field.field.paragraph.features.field_features_title
+    - field.field.paragraph.features.field_prgf_feature_more_edges
+    - field.field.paragraph.features.field_prgf_feature_title
     - paragraphs.paragraphs_type.features
   module:
     - content_moderation
@@ -54,14 +54,14 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
-  field_features_more_rnd_edges:
+  field_prgf_feature_more_edges:
     weight: 5
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
-  field_features_title:
+  field_prgf_feature_title:
     weight: 1
     settings:
       size: 60

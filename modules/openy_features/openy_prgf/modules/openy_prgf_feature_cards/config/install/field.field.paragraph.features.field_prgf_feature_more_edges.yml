@@ -2,16 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_features_more_rnd_edges
+    - field.storage.paragraph.field_prgf_feature_more_edges
     - paragraphs.paragraphs_type.features
   module:
     - datalayer
 third_party_settings:
   datalayer:
     expose: 0
-    label: field_features_more_rnd_edges
-id: paragraph.features.field_features_more_rnd_edges
-field_name: field_features_more_rnd_edges
+    label: field_prgf_feature_more_edges
+_core:
+  default_config_hash: toYwuc4efXe_v_5_MPX9eJ4OyiIJMqw9hJqnYU1axSg
+id: paragraph.features.field_prgf_feature_more_edges
+field_name: field_prgf_feature_more_edges
 entity_type: paragraph
 bundle: features
 label: 'More rounded edges'
@@ -20,7 +22,7 @@ required: false
 translatable: false
 default_value:
   -
-    value: 0
+    value: 1
 default_value_callback: ''
 settings:
   on_label: 'On'

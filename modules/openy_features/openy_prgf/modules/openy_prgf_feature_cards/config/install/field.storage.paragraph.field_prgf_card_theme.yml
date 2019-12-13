@@ -4,18 +4,18 @@ dependencies:
   module:
     - options
     - paragraphs
-id: paragraph.field_prgf_feature_card_button_style
-field_name: field_prgf_feature_card_button_style
+id: paragraph.field_prgf_card_theme
+field_name: field_prgf_card_theme
 entity_type: paragraph
 type: list_string
 settings:
   allowed_values:
     -
-      value: outline
-      label: Outline
+      value: light
+      label: Light
     -
-      value: color_fill
-      label: 'Color Fill'
+      value: dark
+      label: Dark
   allowed_values_function: ''
 module: options
 locked: false

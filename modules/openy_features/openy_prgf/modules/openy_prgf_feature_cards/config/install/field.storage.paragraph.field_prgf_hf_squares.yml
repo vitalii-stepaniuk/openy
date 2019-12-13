@@ -4,8 +4,8 @@ dependencies:
   module:
     - entity_reference_revisions
     - paragraphs
-id: paragraph.field_horizontal_feature_squares
-field_name: field_horizontal_feature_squares
+id: paragraph.field_prgf_hf_squares
+field_name: field_prgf_hf_squares
 entity_type: paragraph
 type: entity_reference_revisions
 settings:

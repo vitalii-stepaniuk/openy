@@ -3,16 +3,16 @@ status: true
 dependencies:
   config:
     - block_content.type.feature_square
-    - field.storage.block_content.field_feature_square_image
+    - field.storage.block_content.field_prgf_feature_square_image
   module:
     - datalayer
     - image
 third_party_settings:
   datalayer:
     expose: 0
-    label: field_feature_square_image
-id: block_content.feature_square.field_feature_square_image
-field_name: field_feature_square_image
+    label: field_prgf_feature_square_image
+id: block_content.feature_square.field_prgf_feature_square_image
+field_name: field_prgf_feature_square_image
 entity_type: block_content
 bundle: feature_square
 label: 'Feature Square Image'

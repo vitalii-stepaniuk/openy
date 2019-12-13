@@ -1,10 +1,13 @@
+uuid: 69479a82-f059-4eef-8ae3-c6d9553da240
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_features_title
-field_name: field_features_title
+_core:
+  default_config_hash: _rHQO5OwR5t9j1xs6tzneGrYyBiroBi84m-STTr0Nk8
+id: paragraph.field_prgf_feature_title
+field_name: field_prgf_feature_title
 entity_type: paragraph
 type: string
 settings:

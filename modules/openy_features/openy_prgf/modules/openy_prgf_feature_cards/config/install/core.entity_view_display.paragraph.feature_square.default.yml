@@ -2,17 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.feature_square.field_card_theme
-    - field.field.paragraph.feature_square.field_feature_button_color
-    - field.field.paragraph.feature_square.field_feature_button_option
-    - field.field.paragraph.feature_square.field_feature_card_background
-    - field.field.paragraph.feature_square.field_feature_card_button_style
-    - field.field.paragraph.feature_square.field_feature_image_style
-    - field.field.paragraph.feature_square.field_feature_square_body
-    - field.field.paragraph.feature_square.field_feature_square_cta
-    - field.field.paragraph.feature_square.field_feature_square_image
-    - field.field.paragraph.feature_square.field_feature_square_title
-    - field.field.paragraph.feature_square.field_feature_title_option
+    - field.field.paragraph.feature_square.field_prgf_card_theme
+    - field.field.paragraph.feature_square.field_prgf_feature_button_color
+    - field.field.paragraph.feature_square.field_prgf_feature_button_option
+    - field.field.paragraph.feature_square.field_prgf_feature_card_bg
+    - field.field.paragraph.feature_square.field_prgf_feature_button_style
+    - field.field.paragraph.feature_square.field_prgf_feature_image_style
+    - field.field.paragraph.feature_square.field_prgf_feature_square_body
+    - field.field.paragraph.feature_square.field_prgf_feature_square_cta
+    - field.field.paragraph.feature_square.field_prgf_feature_square_image
+    - field.field.paragraph.feature_square.field_prgf_feature_square_title
+    - field.field.paragraph.feature_square.field_prgf_feature_title_option
     - image.style.feature_card
     - paragraphs.paragraphs_type.feature_square
   module:
@@ -24,28 +24,28 @@ targetEntityType: paragraph
 bundle: feature_square
 mode: default
 content:
-  field_card_theme:
+  field_prgf_card_theme:
     weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  field_feature_button_color:
+  field_prgf_feature_button_color:
     weight: 11
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  field_feature_button_option:
+  field_prgf_feature_button_option:
     weight: 5
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  field_feature_card_background:
+  field_prgf_feature_card_bg:
     weight: 9
     label: above
     settings:
@@ -53,28 +53,28 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_feature_card_button_style:
+  field_prgf_feature_button_style:
     weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  field_feature_image_style:
+  field_prgf_feature_image_style:
     weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  field_feature_square_body:
+  field_prgf_feature_square_body:
     weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_feature_square_cta:
+  field_prgf_feature_square_cta:
     weight: 3
     label: hidden
     settings:
@@ -86,7 +86,7 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_feature_square_image:
+  field_prgf_feature_square_image:
     weight: 1
     label: hidden
     settings:
@@ -95,7 +95,7 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-  field_feature_square_title:
+  field_prgf_feature_square_title:
     weight: 0
     label: hidden
     settings:
@@ -103,7 +103,7 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_feature_title_option:
+  field_prgf_feature_title_option:
     weight: 4
     label: hidden
     settings: {  }

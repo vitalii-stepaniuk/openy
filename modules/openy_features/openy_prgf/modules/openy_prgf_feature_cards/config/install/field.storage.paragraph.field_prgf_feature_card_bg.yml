@@ -4,8 +4,8 @@ dependencies:
   module:
     - paragraphs
     - taxonomy
-id: paragraph.field_prgf_feature_card_background
-field_name: field_prgf_feature_card_background
+id: paragraph.field_prgf_feature_card_bg
+field_name: field_prgf_feature_card_bg
 entity_type: paragraph
 type: entity_reference
 settings:

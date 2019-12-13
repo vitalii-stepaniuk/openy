@@ -1,17 +1,20 @@
+uuid: 33660696-7276-4a12-8ade-19cd24eca50e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_features_title
+    - field.storage.paragraph.field_prgf_feature_title
     - paragraphs.paragraphs_type.features
   module:
     - datalayer
 third_party_settings:
   datalayer:
     expose: 0
-    label: field_features_title
-id: paragraph.features.field_features_title
-field_name: field_features_title
+    label: field_prgf_feature_title
+_core:
+  default_config_hash: yS-jVfTzY0glVlwjvbDswRk7KPoVeuSVD1wS8bGbq1Q
+id: paragraph.features.field_prgf_feature_title
+field_name: field_prgf_feature_title
 entity_type: paragraph
 bundle: features
 label: 'Features Title'

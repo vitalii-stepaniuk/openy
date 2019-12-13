@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.horizontal_features.field_horizontal_feature_squares
+    - field.field.paragraph.horizontal_features.field_prgf_hf_squares
     - paragraphs.paragraphs_type.horizontal_features
   module:
     - entity_reference_revisions
@@ -11,7 +11,7 @@ targetEntityType: paragraph
 bundle: horizontal_features
 mode: default
 content:
-  field_horizontal_feature_squares:
+  field_prgf_hf_squares:
     type: entity_reference_revisions_entity_view
     weight: 1
     label: hidden

@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_feature_square_image
+    - field.storage.paragraph.field_prgf_feature_square_image
     - paragraphs.paragraphs_type.horizontal_feature_square
   module:
     - datalayer
@@ -10,9 +10,9 @@ dependencies:
 third_party_settings:
   datalayer:
     expose: 0
-    label: field_feature_square_image
-id: paragraph.horizontal_feature_square.field_feature_square_image
-field_name: field_feature_square_image
+    label: field_prgf_feature_square_image
+id: paragraph.horizontal_feature_square.field_prgf_feature_square_image
+field_name: field_prgf_feature_square_image
 entity_type: paragraph
 bundle: horizontal_feature_square
 label: 'Feature Square Image'

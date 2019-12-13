@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.horizontal_feature_square.field_feature_square_body
-    - field.field.paragraph.horizontal_feature_square.field_feature_square_cta
-    - field.field.paragraph.horizontal_feature_square.field_feature_square_image
-    - field.field.paragraph.horizontal_feature_square.field_feature_square_title
+    - field.field.paragraph.horizontal_feature_square.field_prgf_feature_square_body
+    - field.field.paragraph.horizontal_feature_square.field_prgf_feature_square_cta
+    - field.field.paragraph.horizontal_feature_square.field_prgf_feature_square_image
+    - field.field.paragraph.horizontal_feature_square.field_prgf_feature_square_title
     - image.style.horizontal_feature
     - paragraphs.paragraphs_type.horizontal_feature_square
   module:
@@ -17,14 +17,14 @@ targetEntityType: paragraph
 bundle: horizontal_feature_square
 mode: default
 content:
-  field_feature_square_body:
+  field_prgf_feature_square_body:
     weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_feature_square_cta:
+  field_prgf_feature_square_cta:
     weight: 3
     label: hidden
     settings:
@@ -36,7 +36,7 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_feature_square_image:
+  field_prgf_feature_square_image:
     weight: 0
     label: hidden
     settings:
@@ -45,7 +45,7 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-  field_feature_square_title:
+  field_prgf_feature_square_title:
     weight: 1
     label: hidden
     settings:

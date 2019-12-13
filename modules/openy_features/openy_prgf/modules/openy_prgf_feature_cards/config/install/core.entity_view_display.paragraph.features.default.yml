@@ -6,8 +6,8 @@ dependencies:
     - field.field.paragraph.features.field_prgf_feature_overlay
     - field.field.paragraph.features.field_prgf_feature_square
     - field.field.paragraph.features.field_prgf_feature_sub_heading
-    - field.field.paragraph.features.field_features_more_rnd_edges
-    - field.field.paragraph.features.field_features_title
+    - field.field.paragraph.features.field_prgf_feature_more_edges
+    - field.field.paragraph.features.field_prgf_feature_title
     - paragraphs.paragraphs_type.features
   module:
     - entity_reference_revisions
@@ -53,7 +53,7 @@ content:
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_features_title:
+  field_prgf_feature_title:
     weight: 0
     label: hidden
     settings:
@@ -88,4 +88,4 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
 hidden:
-  field_features_more_rnd_edges: true
+  field_prgf_feature_more_edges: true

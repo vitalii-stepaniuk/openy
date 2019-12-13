@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.images_library
-    - field.field.paragraph.horizontal_features.field_horizontal_feature_squares
+    - field.field.paragraph.horizontal_features.field_prgf_hf_squares
     - paragraphs.paragraphs_type.horizontal_features
   module:
     - content_moderation
@@ -14,7 +14,7 @@ targetEntityType: paragraph
 bundle: horizontal_features
 mode: default
 content:
-  field_horizontal_feature_squares:
+  field_prgf_hf_squares:
     type: entity_reference_paragraphs
     weight: 102
     settings:

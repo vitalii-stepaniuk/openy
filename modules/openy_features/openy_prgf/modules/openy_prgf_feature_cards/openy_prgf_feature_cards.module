@@ -26,7 +26,7 @@ function field_prgf_feature_cards_preprocess_paragraph(&$variables) {
     $variables['overlay_class'] = $overlay_class;
 
     // Determine whether squares should have more rounded borders.
-    if ($paragraph->get('field_features_more_rnd_edges')->value) {
+    if ($paragraph->get('field_prgf_feature_more_rnd_edges')->value) {
       $variables['more_rounded'] = TRUE;
     }
   }
@@ -125,8 +125,8 @@ function field_prgf_feature_cards_preprocess_paragraph(&$variables) {
     }
 
     // Assign the button color classes
-    if($paragraph->hasField('field_feature_button_color')) {
-      $field = $paragraph->get('field_feature_button_color');
+    if($paragraph->hasField('field_prgf_feature_button_color')) {
+      $field = $paragraph->get('field_prgf_feature_button_color');
       $button_class = 'color-' . $field->value;
     }
 
@@ -148,8 +148,8 @@ function field_prgf_feature_cards_preprocess_paragraph(&$variables) {
     }
 
     $theme_class = 'theme-light';
-    if($paragraph->hasField('field_card_theme')) {
-      $theme_class = 'theme-' . $paragraph->get('field_card_theme')->value;
+    if($paragraph->hasField('field_prgf_card_theme')) {
+      $theme_class = 'theme-' . $paragraph->get('field_prgf_card_theme')->value;
     }
 
     $variables['background_style'] = $background_style;
