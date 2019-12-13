@@ -3,7 +3,7 @@
   margin: 0;
   flex-direction: column-reverse;
 
-  @include media-breakpoint-up($tablet) {
+  @include media-breakpoint-up(768px) {
     flex-direction: row;
   }
 
@@ -12,7 +12,7 @@
     max-width:100%;
     padding:0;
 
-    @include media-breakpoint-up($tablet) {
+    @include media-breakpoint-up(768px) {
       padding: 0;
     }
   }
@@ -35,7 +35,7 @@
   .ping-pong-content {
     &.float-right {
       order: 0;
-      @include media-breakpoint-up($tablet) {
+      @include media-breakpoint-up(768px) {
         order: 1;
       }
     }
@@ -55,52 +55,49 @@
   padding: 3rem;
   height: 100%;
 
-  @media (min-width: $tablet) {
+  @media (min-width: 768px) {
     padding: 3rem 1rem;
   }
 
-  @media (min-width: $desktop-small) {
+  @media (min-width: 1024px) {
     padding: 3rem 3rem;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: 1200px) {
     padding: 3rem 4rem;
   }
 }
 .ping-pong-component .ping-pong-content-title {
-  @include cachet-bold;
+  @include cachet(900);
   @include rem(font-size, 24px);
   @include rem(line-height, 28px);
   text-transform: uppercase;
   margin: 0;
 
-  @media (min-width: $tablet-start) {
+  @media (min-width: 992px) {
     @include rem(font-size, 48px);
     @include rem(line-height, 44px);
   }
 }
 .ping-pong-component {
   .ping-pong-content-description {
-    @include verdana;
     @include rem(font-size, 14px);
     @include rem(line-height, 21px);
     padding: 1.5rem 0;
-    //color: $gray-919;
 
-    @media (min-width: $tablet-start) {
+    @media (min-width: 992px) {
       @include rem(font-size, 18px);
       @include rem(line-height, 27px);
     }
   }
   .ping-pong-content-link a {
-    //@include button($white, $pink, 20px, lighten($pink, 10%));
     @include rem(padding-top, 14px);
     @include rem(padding-bottom, 14px);
     font-weight: 700;
     text-transform: uppercase;
     margin-top: 5px;
 
-    @media (min-width: $tablet-start) {
+    @media (min-width: 992px) {
       padding-top: 1rem;
       padding-bottom: 1rem;
       margin-top: 10px;
@@ -122,7 +119,7 @@
   position: relative;
   display: block;
 
-  @media (min-width: $desktop-small) {
+  @media (min-width: 1024px) {
     position: absolute;
     min-height: 100%;
   }
@@ -167,7 +164,7 @@
     }
 
     &.defailt-bg {
-      background-color:$gray-5ff;
+      background-color:#faf5ff;
     }
   }
 

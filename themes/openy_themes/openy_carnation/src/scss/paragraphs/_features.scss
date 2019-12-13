@@ -1,3 +1,70 @@
+@mixin button($color: $white, $bg-color: $purple, $b-radius: 0.3rem, $hover: #e3c7e1, $color-hover: $white) {
+  @include rem(font-size, 16px);
+  @include cachet(900);
+  @include rem(border-radius, 20px);
+  font-family: $font-family-sans-serif;
+  transition: all 0.1s linear;
+  display: inline-block;
+  color: $color;
+  background-color: $bg-color;
+  padding: 1rem 2.8rem;
+  text-transform: initial;
+  -webkit-border-radius: $b-radius;
+  -moz-border-radius: $b-radius;
+  border-radius: $b-radius;
+  white-space: unset;
+  vertical-align: unset;
+  border: none;
+  text-decoration:none;
+
+  &:hover {
+    @include transition(all 0.2s linear);
+    color: $color-hover;
+    background-color: $hover;
+  }
+
+  &:active {
+    background-color: $hover !important;
+    color: $color-hover !important;
+  }
+}
+
+@mixin button-purple() {
+  @include button($white, $card-purple, 20px, $card-purple-hover, $white);
+}
+
+@mixin button-pink() {
+  @include button($white, $card-pink, 20px, $card-pink-hover, $white);
+}
+
+@mixin button-primary() {
+  @include button($white, $dark-blue, 20px, lighten($dark-blue, 10%), $white);
+}
+
+@mixin button-blue() {
+  @include button($white, $dark-blue, 20px, lighten($dark-blue, 10%), $white);
+}
+
+@mixin button-orange() {
+  @include button($white, $orange, 20px, lighten($orange, 10%), $white);
+}
+
+@mixin button-white() {
+  @include button($black, $white, 30px, $black, $white);
+}
+
+@mixin flat-button($color: $white, $hover_color: $black) {
+  @include button($color, transparent, 30px, $color, $hover_color);
+  @include transition(all 0.2s linear);
+  border: 3px solid $color;
+  padding: 0.8rem 2.8rem;
+
+  &:hover, &:active {
+    color: $hover_color !important;
+    background-color: $color !important;
+  }
+}
+
 body {
   &.path-frontpage {
     .features-paragraph-container {
@@ -18,7 +85,7 @@ body {
   margin: 0 auto;
   width:100%;
 
-  @media (max-width: $mobile-landscape) {
+  @media (max-width: 480px) {
     padding: 0 10px;
   }
 }
@@ -32,7 +99,7 @@ body {
         margin-top:-125px;
         padding-top:0;
 
-        @media (max-width: $tablet-start) {
+        @media (max-width: 992px) {
           margin-top: -100px !important;
         }
       }
@@ -56,16 +123,16 @@ body {
       display: block;
       margin: 20px 0 25px 0;
 
-      @media (max-width: $tablet) {
+      @media (max-width: 768px) {
         margin-top: 0;
       }
 
       h1 {
         @include rem(font-size, 44px);
-        @include cachet-bold;
-        color: $paragraph-heading;
+        @include cachet(900);
+        color: $gray-400;
 
-        @media (max-width: $tablet) {
+        @media (max-width: 768px) {
           margin-top: 0;
           font-size: 36px;
         }
@@ -74,9 +141,8 @@ body {
 
       .sub-heading {
         @include rem(font-size, 18px);
-        @include verdana();
         line-height: 27px;
-        color: $paragraph-sub-heading;
+        color: #1a1919;
       }
     }
 
@@ -110,12 +176,12 @@ body {
           }
         }
 
-        @media (max-width: $tablet) {
+        @media (max-width: 768px) {
           margin: 25px auto;
           float: none;
         }
 
-        @media (min-width: $tablet-start) {
+        @media (min-width: 992px) {
           &.feature-center-one {
             margin-left: 33%;
             margin-right: 33%;
@@ -130,7 +196,7 @@ body {
           }
         }
 
-        @media (min-width: $tablet) and (max-width: $tablet-start) {
+        @media (min-width: 768px) and (max-width: 992px) {
           &.feature-center-two-right {
             margin-left: 25%;
           }
@@ -159,7 +225,7 @@ body {
 
             .feature-square-title {
               h4 {
-                @include cachet-bold;
+                @include cachet(900);
                 @include rem(font-size, 24px);
                 @include rem(line-height, 30px);
                 margin-bottom: 0;
@@ -172,7 +238,6 @@ body {
               padding-top:15px;
 
               .feature-square-description {
-                @include verdana();
                 @include rem(font-size, 18px);
                 @include rem('line-height', 27px);
                 margin-top:0;
@@ -189,7 +254,7 @@ body {
           &.place-title-above {
             .feature-square-title {
               h4 {
-                @include cachet-medium();
+                @include cachet(500);
                 @include rem(font-size, 24px);
                 @include rem(line-height, 30px);
                 padding-top:0px;
@@ -219,7 +284,7 @@ body {
           &.no-image {
             .feature-square-title {
               h4 {
-                @include cachet-bold;
+                @include cachet(900);
                 @include rem(font-size, 33px);
                 @include rem('line-height', 36px);
                 text-align:center;
@@ -256,7 +321,7 @@ body {
 
           .feature-square-title {
             h4 {
-              @include cachet-medium();
+              @include cachet(500);
               @include rem(font-size, 24px);
               line-height: 25px;
               display: block;
