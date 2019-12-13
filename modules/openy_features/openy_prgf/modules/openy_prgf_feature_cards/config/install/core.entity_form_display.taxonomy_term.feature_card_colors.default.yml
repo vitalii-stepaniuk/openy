@@ -1,0 +1,61 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.feature_card_colors.field_color
+    - field.field.taxonomy_term.feature_card_colors.field_feature_color_class
+    - taxonomy.vocabulary.feature_card_colors
+  module:
+    - jquery_colorpicker
+    - path
+    - text
+id: taxonomy_term.feature_card_colors.default
+targetEntityType: taxonomy_term
+bundle: feature_card_colors
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_color:
+    weight: 31
+    settings:
+      color: FFFFFF
+    third_party_settings: {  }
+    type: jquery_colorpicker
+    region: content
+  field_feature_color_class:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

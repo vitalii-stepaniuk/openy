@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_color
+    - taxonomy.vocabulary.feature_card_colors
+  module:
+    - datalayer
+    - jquery_colorpicker
+third_party_settings:
+  datalayer:
+    expose: 0
+    label: field_color
+id: taxonomy_term.feature_card_colors.field_color
+field_name: field_color
+entity_type: taxonomy_term
+bundle: feature_card_colors
+label: Color
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: FFFFFF
+default_value_callback: ''
+settings: {  }
+field_type: jquery_colorpicker

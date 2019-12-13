@@ -44,28 +44,28 @@
 <div {{ attributes }} class="paragraph features-paragraph {{ overlay_class }}">
   <div class="features-paragraph-container container {% if more_rounded %}more-rounded{% endif %}">
 
-    {% if (content.field_features_title.0 is not empty) or (content.field_feature_sub_heading.0 is not empty) %}
+    {% if (content.field_features_title.0 is not empty) or (content.field_prgf_feature_sub_heading.0 is not empty) %}
     <div class="features-heading">
       {% if content.field_features_title.0 is not empty %}
         <h1 class="feature-heading">{{ content.field_features_title }}</h1>
       {% endif %}
 
-      {% if content.field_feature_sub_heading.0 is not empty %}
+      {% if content.field_prgf_feature_sub_heading.0 is not empty %}
       <div class="sub-heading">
-        {{ content.field_feature_sub_heading }}
+        {{ content.field_prgf_feature_sub_heading }}
       </div>
       {% endif %}
     </div>
     {% endif %}
 
     <div class="row">
-      {{ content.field_feature_square }}
+      {{ content.field_prgf_feature_square }}
       <div class="clearfix"></div>
     </div>
 
-    {% if not paragraph.field_feature_cta_link.isEmpty() %}
+    {% if not paragraph.field_prgf_feature_cta_link.isEmpty() %}
       <div class="row justify-content-center">
-        <div class="features-cta-button">{{ content.field_feature_cta_link }}</div>
+        <div class="features-cta-button">{{ content.field_prgf_feature_cta_link }}</div>
       </div>
     {% endif %}
 

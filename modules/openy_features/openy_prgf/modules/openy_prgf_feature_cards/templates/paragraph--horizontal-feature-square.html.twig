@@ -37,16 +37,16 @@
  */
 #}
 {%
-  set square_full_width = paragraph.field_feature_square_image.isEmpty()
+  set square_full_width = paragraph.field_prgf_feature_square_image.isEmpty()
 %}
 <div class="feature-square {{ bootstrap_classes }} ">
   <div class="feature-square-container {{  title_class }} {{  link_class }} {{ image_size_class }}">
 
     <div class="feature-content-container row">
 
-      {% if not paragraph.field_feature_square_image.isEmpty() %}
+      {% if not paragraph.field_prgf_feature_square_image.isEmpty() %}
         <div class="left-side col-xs-12 col-sm-12 col-md-5 feature-content-section">
-          <div class="feature-square-image">{{ content.field_feature_square_image }}</div>
+          <div class="feature-square-image">{{ content.field_prgf_feature_square_image }}</div>
         </div>
       {% endif %}
 
@@ -54,16 +54,16 @@
         <div class="feature-square-content">
           <div class="feature-square-title">
             <h4>
-              {{ content.field_feature_square_title }}
+              {{ content.field_prgf_feature_square_title }}
             </h4>
           </div>
 
           <div class="feature-square-description">
-              {{ content.field_feature_square_body }}
+              {{ content.field_prgf_feature_square_body }}
           </div>
 
           <div class="feature-square-button fa">
-            {{ content.field_feature_square_cta }}
+            {{ content.field_prgf_feature_square_cta }}
           </div>
         </div>
       </div>
