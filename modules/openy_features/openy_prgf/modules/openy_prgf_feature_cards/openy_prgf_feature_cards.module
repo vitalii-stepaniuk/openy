@@ -29,7 +29,7 @@ function openy_prgf_feature_cards_preprocess_paragraph(&$variables) {
   $type = $paragraph->getType();
 
   // Main feature container template variables
-  if($type == 'features') {
+  if ($type == 'features') {
     $variables['#attached']['library'][] = 'field_prgf_feature_cards/feature-js';
 
     // Determine whether this feature hsa an overlay.
@@ -48,7 +48,7 @@ function openy_prgf_feature_cards_preprocess_paragraph(&$variables) {
   }
 
   // Individual feature cards
-  if($type == 'feature_square') {
+  if ($type == 'feature_square') {
     // Figure out the columns in this feature so we can boostrap class it.
     $bootstrap_class = "col-xs-12 col-sm-12 col-lg-4 col-md-6";
     // Put our classes in the template.
@@ -57,7 +57,7 @@ function openy_prgf_feature_cards_preprocess_paragraph(&$variables) {
     // Place the title above or below the image
     // and provide a class for styling.
     $title_placement = $paragraph->get('field_prgf_feature_title_option')->value;
-    if(empty($title_placement)) {
+    if (empty($title_placement)) {
       $title_placement = 'none';
     }
 
@@ -84,8 +84,7 @@ function openy_prgf_feature_cards_preprocess_paragraph(&$variables) {
           '#url' => Url::fromUri($info['uri']),
         ];
       }
-    }
-    else {
+    } else {
       if ($placement == 'full_card' && !$paragraph->get('field_prgf_feature_square_cta')->isEmpty()) {
         // Grab the url so we can place it around text if necessary.
         $info = $paragraph->get('field_prgf_feature_square_cta')
@@ -102,69 +101,62 @@ function openy_prgf_feature_cards_preprocess_paragraph(&$variables) {
     if ($placement == 'show' || $placement == 'button') {
       $variables['link_class'] = 'link-button';
       $variables['has_button'] = 'has-button';
-    }
-    elseif ($placement == 'both') {
+    } elseif ($placement == 'both') {
       $variables['link_class'] = 'link-button link-title';
       $variables['has_button'] = 'has-button';
-    }
-    elseif ($placement == 'content') {
+    } elseif ($placement == 'content') {
       $variables['link_class'] = 'hide-button link-title';
-    }
-    elseif ($placement == 'full_card') {
+    } elseif ($placement == 'full_card') {
       $variables['link_class'] = 'hide-button link-card';
-    }
-    else {
+    } else {
       // Default to no linking.
       $variables['link_class'] = 'hide-button';
     }
 
-
     //Image size class
-    if($paragraph->hasField('field_prgf_feature_image_style')) {
+    if ($paragraph->hasField('field_prgf_feature_image_style')) {
       $style = $paragraph->get('field_prgf_feature_image_style')->value;
-      if($style == 'full_width') {
+      if ($style == 'full_width') {
         $variables['image_size_class'] = 'full-width-image';
       }
     }
 
-    if($paragraph->hasField('field_prgf_feature_square_image') &&
+    if ($paragraph->hasField('field_prgf_feature_square_image') &&
       empty($paragraph->get('field_prgf_feature_square_image')->target_id)) {
       $variables['image_size_class'] = 'no-image';
 
     }
 
-
     // Get the card background color class
     $background_style = openy_prgf_feature_cards_get_color_from_field('field_prgf_feature_card_bg', $paragraph);
-    if(empty($background_style)) {
+    if (empty($background_style)) {
       $background_style = '#FFFFFF';
     }
 
     // Assign the button color classes
-    if($paragraph->hasField('field_prgf_feature_button_color')) {
+    if ($paragraph->hasField('field_prgf_feature_button_color')) {
       $field = $paragraph->get('field_prgf_feature_button_color');
       $button_class = 'color-' . $field->value;
     }
 
     // Make sure we have a default value
-    if(empty($button_class)) {
+    if (empty($button_class)) {
       $button_class = 'color-purple';
     }
 
     // Handle the class for our button style
-    if($paragraph->hasField('field_prgf_feature_button_style')) {
+    if ($paragraph->hasField('field_prgf_feature_button_style')) {
       $style = $paragraph->get('field_prgf_feature_button_style')->value;
       // Default to a fill-color
-      if($style == 'color_fill' || empty($style)) {
+      if ($style == 'color_fill' || empty($style)) {
         $button_class .= ' fill-color';
-      }
-      else  if($style == 'outline') {
+      } else if ($style == 'outline') {
         $button_class .= ' outline-color';
       }
     }
 
     $theme_class = 'theme-light';
-    if($paragraph->hasField('field_prgf_card_theme')) {
+    if ($paragraph->hasField('field_prgf_card_theme')) {
       $theme_class = 'theme-' . $paragraph->get('field_prgf_card_theme')->value;
     }
 
@@ -185,10 +177,10 @@ function openy_prgf_feature_cards_get_color_from_field($field_name, $paragraph) 
   $color_class = "";
 
   // Assign the button color classes
-  if($paragraph->hasField($field_name)) {
+  if ($paragraph->hasField($field_name)) {
     $field = $paragraph->get($field_name);
 
-    if(!empty($field->target_id)) {
+    if (!empty($field->target_id)) {
       $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($field->target_id);
       if ($term->hasField('field_color')) {
         $color_class = $term->get('field_color')->value;
