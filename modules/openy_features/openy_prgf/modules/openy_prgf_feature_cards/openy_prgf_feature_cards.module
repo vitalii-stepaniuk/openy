@@ -14,7 +14,7 @@ function openy_prgf_feature_cards_theme() {
     'horizontal_features',
   ];
   foreach ($paragraphs as $paragraph) {
-    $theme['paragraph__' . $paragraph . '__default'] = ['base hook' => 'paragraph'];
+    $theme['paragraph__' . $paragraph] = ['base hook' => 'paragraph'];
   }
   return $theme;
 }

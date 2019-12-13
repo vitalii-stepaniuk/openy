@@ -38,16 +38,16 @@
 #}
 {% set empty_content = 'no-content' %}
 {% if title_placement == 'below' or title_placement == 'none'%}
-    {% if content.field_feature_square_title|render|trim is not empty  %}
+    {% if content.field_prgf_feature_square_title|render|trim is not empty  %}
         {% set empty_content = '' %}
     {% endif %}
 {% endif %}
 
-{% if content.field_feature_square_body|render|trim is not empty %}
+{% if content.field_prgf_feature_square_body|render|trim is not empty %}
   {% set empty_content = '' %}
 {% endif %}
 
-{% if content.field_feature_square_cta|render|trim is not empty %}
+{% if content.field_prgf_feature_square_cta|render|trim is not empty %}
   {% if 'hide-button' not in link_class %}
       {% set empty_content = '' %}
   {% endif %}
@@ -55,39 +55,39 @@
 
 
 <div class="feature-square {{ bootstrap_classes }} {{ theme_class }}  {{  link_class }}">
-  <div class="feature-square-container {{ title_class }} {{ image_size_class }} {% if paragraph.field_feature_square_cta.isEmpty() %}no-button{% endif %}{%
-    if not paragraph.field_feature_card_background.isEmpty() %}{{ paragraph.field_feature_card_background.entity.name.value|clean_class }}{% endif %}"
+  <div class="feature-square-container {{ title_class }} {{ image_size_class }} {% if paragraph.field_prgf_feature_square_cta.isEmpty() %}no-button{% endif %}{%
+    if not paragraph.field_prgf_feature_card_bg.isEmpty() %}{{ paragraph.field_prgf_feature_card_bg.entity.name.value|clean_class }}{% endif %}"
        style="background-color:{{ background_style }};">
 
     {% if (title_placement == 'above') or (title_placement is empty) %}
       <div class="feature-square-title">
         <h4>
-          {{ content.field_feature_square_title }}
+          {{ content.field_prgf_feature_square_title }}
         </h4>
       </div>
     {% endif %}
 
     <div class="feature-square-image">
-      {{ content.field_feature_square_image }}
+      {{ content.field_prgf_feature_square_image }}
     </div>
 
     <div class="feature-square-content {{ empty_content }}">
       {% if (title_placement == 'below') %}
         <div class="feature-square-title">
           <h4>
-            {{ content.field_feature_square_title }}
+            {{ content.field_prgf_feature_square_title }}
           </h4>
         </div>
       {% endif %}
 
-      {% if content.field_feature_square_body|render|trim is not empty %}
+      {% if content.field_prgf_feature_square_body|render|trim is not empty %}
         <div class="feature-square-description {{ has_button }}">
-            {{ content.field_feature_square_body }}
+            {{ content.field_prgf_feature_square_body }}
         </div>
       {% endif %}
 
       <div class="feature-square-button {{ button_class }}">
-        {{ content.field_feature_square_cta }}
+        {{ content.field_prgf_feature_square_cta }}
       </div>
     </div>
   </div>
