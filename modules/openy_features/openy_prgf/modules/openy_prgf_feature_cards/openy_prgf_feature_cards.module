@@ -30,7 +30,7 @@ function openy_prgf_feature_cards_preprocess_paragraph(&$variables) {
 
   // Main feature container template variables
   if ($type == 'features') {
-    $variables['#attached']['library'][] = 'field_prgf_feature_cards/feature-js';
+    $variables['#attached']['library'][] = 'openy_prgf_feature_cards/feature-js';
 
     // Determine whether this feature hsa an overlay.
     $overlay_class = "";
